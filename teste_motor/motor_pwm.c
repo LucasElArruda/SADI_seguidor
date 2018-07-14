@@ -20,12 +20,16 @@ void main(void) {
   //ADCCON1 = 0x80; //Configuração do ADC
   configura_serial(); //Configuração da serial
   configura_PWM(); //Configuração do PWM
+
+  
+  
   while (1) {
     //Configura o valor de referencia do PWM0 para ser 2,5V e o PWM1 para ser 5V
-    PWM0H = 0x0000;
-    PWM0L = 0xFFFF; 
-    PWM1H = 0xFFFF;
-    PWM1L = 0xFFFF; 
+  	PWM0H = 0x7F;
+	PWM0L = 0xFF; 
+  	
+  	//PWM1L = 0x00;
+  	//PWM1H = 0x00;
     printf("Imprimindo as coisas aqui \n");
   }
 }
